@@ -1,0 +1,14 @@
+{
+  "projects" : [
+    {
+      "name": "Monsoon Accessorize",
+      "id": "monsoon",
+      "thumb": "images/clients/monsoon-accessorize-logo.jpg"
+    },
+    {
+      "name": "Delhaize Group",
+      "id": "delhaize",
+      "thumb": "images/clients/delhaize-logo.jpg"
+    }
+  ]
+}
