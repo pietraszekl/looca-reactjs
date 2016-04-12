@@ -1,8 +1,11 @@
 import React from "react";
 import Title from "./Header/Title";
-
 let Hero = React.createClass({
+
 	render() {
+		let appData =window.localStorage.getItem("appData");
+		appData = JSON.parse(appData);
+		const person = appData.lukasz;
 		return (
 			<section class="section hero">
 				<div class="container">
@@ -11,9 +14,9 @@ let Hero = React.createClass({
 							<img class="side-front" src="images/looca-side-a.png" alt="Lukasz Pietraszek" />
 							<img class="side-back" src="images/looca-side-b.png" alt="Lukasz Pietraszek Logo" />
 						</div>
-						<h2 class="hero-sub-heading">UI Developer</h2>
+						<h2 class="hero-sub-heading">{person.title}</h2>
 						<hr class="u-hero-divider" />
-						<h1 class="hero-heading">Lukasz Pietraszek</h1>
+						<h1 class="hero-heading">{person.name}</h1>
 						<ul class="contact-icons twelve columns">
 							<li class="contact-icons-item">
 								<a href="//twitter.com/pietraszekl">
