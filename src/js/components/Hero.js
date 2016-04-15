@@ -1,5 +1,7 @@
 import React from "react";
 import Title from "./Header/Title";
+import {Link} from "react-router";
+
 let Hero = React.createClass({
 
 	render() {
@@ -43,10 +45,10 @@ let Hero = React.createClass({
 								</a>
 							</li>
 						</ul>
-						<p class="section-description">Freelance UI/Front-end developer with proven track-record over five years in creating clean, accessible and user-friendly responsive websites. Self motivated and adaptable, independent minded, with a keen eye for detail. Experienced in working with Agile methodologies.</p>
+						<p class="section-description">{person.about}</p>
 
-						<p class="section-description">Specialities: HTML5, CSS3, Web Design/Development, RWD, Usability, Web Standards, Axure RP</p>
-						<a class="button" href="/documents/Lukasz_Pietraszek_CV.docx" target="blank">Download my CV</a>
+						<p class="section-description">{person.specialities}</p>
+						<Link to={person.cv.btnLink} class="button" target="blank">{person.cv.btnTxt}</Link>
 					</div>
 				</div>
 			</section>

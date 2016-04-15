@@ -1,7 +1,13 @@
 {
   "lukasz":{
     "name": "Lukasz Pietraszek",
-    "title": "UI Developer"
+    "title": "UI Developer",
+    "about": "Freelance UI/Front-end developer with proven track-record over five years in creating clean, accessible and user-friendly responsive websites. Self motivated and adaptable, independent minded, with a keen eye for detail. Experienced in working with Agile methodologies.",
+    "specialities": "Specialities: HTML5, CSS3, Web Design/Development, RWD, Usability, Web Standards, Axure RP",
+    "cv": {
+      "btnTxt": "Download my CV",
+      "btnLink": "/documents/Lukasz_Pietraszek_CV.docx"
+    }
   },
   "projects" : [
     {
