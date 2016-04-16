@@ -1,5 +1,5 @@
 import React from "react";
-import Testimonial from "./Testimonial"
+import Testimonial from "./Testimonial";
 
 let Testimonials = React.createClass({
 	getInitialState() {

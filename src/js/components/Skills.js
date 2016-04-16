@@ -1,24 +1,30 @@
 import React from "react";
+import Skill from "./Skill";
+
 
 let Skills= React.createClass({
+	getInitialState() {
+		return {
+			data: {}
+		}
+	},
+	componentWillMount() {
+		const appData = window.localStorage.getItem("appData");
+		this.state.data = JSON.parse(appData);
+	},
 	render() {
+		const skillsData = this.state.data.lukasz.skills;
+		const SkillsList = skillsData.list.map((skill,i)=>	<Skill key={i} skill={skill}/>);
 		return (
 			<section class="section skills">
 				<div class="container">
-					<h2 class="section-heading">Skills</h2>
+					<h2 class="section-heading">{skillsData.header}</h2>
 					<div class="row">
-						<p class="section-description">I hand-code all of my HTML, CSS and Javascript due to the strong belief that robust solutions depend upon a deep understanding of all the front-end code. This discipline also enables efficient fixing of bugs when they arise.</p>
+						<p class="section-description">{skillsData.intro}</p>
 					</div>
 					<div class="row">
 						<ul class="skills-list">
-							<li class="skills-list-item">HTML5 & CSS3</li>
-							<li class="skills-list-item">JavaScript</li>
-							<li class="skills-list-item">jQuery</li>
-							<li class="skills-list-item">Git & SVN</li>
-							<li class="skills-list-item">SVN</li>
-							<li class="skills-list-item">SASS & LESS</li>
-							<li class="skills-list-item">Agile/Scrum experience</li>
-							<li class="skills-list-item">Responsive/mobile-first sites</li>
+							{SkillsList}
 						</ul>
 					</div>
 				</div>

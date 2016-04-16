@@ -1,5 +1,4 @@
 import React from "react";
-import {Link} from "react-router";
 import SocialLink from "./SocialLink";
 
 const Hero = React.createClass({
@@ -32,7 +31,7 @@ const Hero = React.createClass({
 						<p class="section-description">{person.about}</p>
 
 						<p class="section-description">{person.specialities}</p>
-						<Link to={person.cv.btnLink} class="button" target="blank">{person.cv.btnTxt}</Link>
+						<a href={person.cv.btnLink} class="button" target="blank">{person.cv.btnTxt}</a>
 					</div>
 				</div>
 			</section>

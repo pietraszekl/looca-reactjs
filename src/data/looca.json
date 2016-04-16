@@ -5,9 +5,14 @@
     "about": "Freelance UI/Front-end developer with proven track-record over five years in creating clean, accessible and user-friendly responsive websites. Self motivated and adaptable, independent minded, with a keen eye for detail. Experienced in working with Agile methodologies.",
     "specialities": "Specialities: HTML5, CSS3, Web Design/Development, RWD, Usability, Web Standards, Axure RP",
     "photo": "images/looca-side-a.png",
+    "skills": {
+      "header": "Skills",
+      "intro": "I hand-code all of my HTML, CSS and Javascript due to the strong belief that robust solutions depend upon a deep understanding of all the front-end code. This discipline also enables efficient fixing of bugs when they arise.",
+      "list": ["HTML5 & CSS3", "JavaScript & jQuery", "Git & SVN", "SASS & LESS", "Agile/Scrum experience", "Responsive/mobile-first sites"]
+    },
     "cv": {
       "btnTxt": "Download my CV",
-      "btnLink": "/documents/Lukasz_Pietraszek_CV.docx"
+      "btnLink": "https://onedrive.live.com/redir?resid=CD059480434A18A1!438&authkey=!AAXXU9kV759J9p8&ithint=file%2cdocx"
     },
     "connect": [
       {
@@ -32,6 +37,7 @@
       }
     ]
   },
+  "footnote": "Made in UK by Lukasz Pietraszek. Built using ReactJS, Webpack and Sass.",
   "testimonials": [
     {
       "name": "Simon Davies",
@@ -56,7 +62,7 @@
       "monsoon": {
         "name": "Monsoon Accessorize",
         "id": "monsoon",
-        "logo": "images/clients/monsoon-accessorize-logo.jpg",
+        "logo": "monsoon-accessorize-logo.jpg",
         "desc": "I've been working on numbers of change request related to mini basket, checkout view, product grid view and product details pages for both Monsoon and Accessorize sites as well as fixing reported bugs.",
         "links": [
           {
@@ -70,13 +76,17 @@
         ],
         "year": "2013",
         "tech": ["Hybris CMS", "jQuery", "CSS"],
-        "img": ["/images/monsoon/monsoon-1.jpg","/images/monsoon/monsoon-2.jpg" ]
-
+        "img": [
+          {
+            "src": "/images/monsoon/monsoon-1.jpg",
+            "altText": "Monsoon website"
+            }
+          ]
       },
       "delhaize": {
         "name": "Delhaize Group",
         "id": "delhaize",
-        "logo": "images/clients/delhaize-logo.jpg",
+        "logo": "delhaize-logo.jpg",
         "desc": "Developing two e-grocery shops for Delhaize Group. French/Belgian version consist of eshop as well as 'Loyalty on Web' which allows customers to register loyalty cards and to accrue points on purchases where they present the registered card. These were build using Bootstrap 2 and Less. Greek version of e-shop and corporate platform were build using Bootstrap 3 and Sass.",
         "links": [
           {
@@ -90,7 +100,77 @@
         ],
         "year": "2013/2014",
         "tech":["Hybris CMS", "Bootstrap 2 & 3", "JavaScript", "Sass/Less"],
-        "img":["images/delhaize/delhaize-1.jpg", "images/delhaize/delhaize-2.jpg"]
+        "img":[
+          {
+            "src": "/images/delhaize/delhaize-1.jpg",
+            "altText": "Delhaize website"
+          }
+        ]
+      },
+      "bat": {
+        "name": "British American Tobacco",
+        "id": "bat",
+        "logo": "bat-logo.jpg",
+        "desc": "B2B project developed for British American Tobacco Australia to provided their client base with the best possible experience for desktop as well as tablet/mobile devices when ordering larger volumes of products.",
+        "year": "2014/2015",
+        "links":[],
+        "tech": ["HTML","Sass","jQuery","Bootstrap 3","Responsive"],
+        "img":[
+          {
+            "src": "/images/bat/bat-veo-1.jpg",
+            "altText": "British American Tobacco wesbite"
+          }
+        ]
+      },
+      "poferries": {
+        "name": "P&O Ferries",
+        "id": "poferries",
+        "logo": "poferries-logo.jpg",
+        "desc": "Development of templates for desktop version for the website. The pages were tested and integrated into Hybris CMS e-commerce platform.",
+        "year": "2014",
+        "links": [
+          {
+            "text": "Visit P&O Ferries website",
+            "url": "http://www.poferries.com/"
+          }
+        ],
+        "tech": ["Hybris CMS","Bootstrap 3","jQuery", "Responsive", "Less"],
+        "img": [
+          {
+            "src": "/images/poferries/poferries-1.jpg",
+            "altText": "P&O Ferriers website"
+          }
+        ]
+      },
+      "phones4u": {
+        "name": "Phones 4u",
+        "id": "phones4u",
+        "logo": "phones4u-logo.jpg",
+        "desc": "Implementation of Hybris CMS and Responsive Web Design for one of largest mobile phone retailers (at that time) in the United Kingdom.",
+        "year": "2013",
+        "links":[],
+        "tech": ["Hybris CMS","Bootstrap 3","jQuery","Responsive","Less"],
+        "img": [
+          {
+            "src": "/images/phones4u/phones4u-1.jpg",
+            "altText": "Phones 4u website"
+          }
+        ]
+      },
+      "office": {
+        "name": "Office Shoes",
+        "id": "office",
+        "logo": "office-logo.jpg",
+        "desc": "Creating mobile version of the site for Office shoes using jQuery mobile framework and Hyrbis CMS e-commerce platform. Functionality I've been building includes navigation, grid view and checkout process.",
+        "year": "2013/2014",
+        "links":[],
+        "tech": ["Hybris CMS","jQuery Mobile", "CSS", "HTML"],
+        "img":[
+          {
+            "src": "/images/office/office-1.jpg",
+            "altText": "Office shoes website"
+          }
+        ]
       }
     }
   }

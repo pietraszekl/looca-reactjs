@@ -8,7 +8,7 @@ let Project = React.createClass({
 		return (
 
 			<Link to={'/portfolio/' + project.id} class="four columns img-grayscale-color">
-				<img class="u-max-full-width" src={project.logo} alt={project.name}/>
+				<img class="u-max-full-width" src={"/images/logos/"+project.logo} alt={project.name}/>
 			</Link>
 		);
 	}
