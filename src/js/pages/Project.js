@@ -1,13 +1,13 @@
 import React from "react";
 import Footer from "../components/Footer";
-
+import ProjectDetails from "../components/ProjectDetails"
 
 let ProjectPage = React.createClass({
 	render() {
 		const {params} = this.props;
 		return (
 			<div>
-				<h1>Project name: {params.project}</h1>
+				<ProjectDetails project={params.project}/>
 				<Footer />
 			</div>
 		);

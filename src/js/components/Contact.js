@@ -10,7 +10,7 @@ let Contact = React.createClass({
 				<div class="container">
 					<h2 class="section-heading">Get in touch</h2>
 					<div class="row">
-						<form id="contact-form" class="contact-form" action="#" method="POST">
+						<form id="contact-form" class="contact-form" action="https://formspree.io/info@looca.co.uk" method="POST">
 							<div class="row">
 								<div class="six columns">
 									<label for="emailInput">Your email</label>

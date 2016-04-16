@@ -1,0 +1,269 @@
+@import 'normalize.scss';
+@import 'skeleton.scss';
+@import 'variables.scss';
+
+// Global styles
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+body {
+  color: $gray-dark;
+  margin: 0;
+}
+.button:hover, button:hover, input[type="submit"]:hover, input[type="reset"]:hover, input[type="button"]:hover {
+  color: $orange;
+  border-color: $orange;
+}
+textarea:focus, select:focus, input[type="reset"]:hover, input[type="email"]:focus, input[type="number"]:focus, input[type="search"]:focus, input[type="text"]:focus, input[type="tel"]:focus, input[type="url"]:focus, input[type="password"]:focus {
+  border-color: $orange;
+}
+// Shared
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+.button {
+  border-radius: 100px;
+}
+.list-heading {
+  font-weight: 600;
+  margin-bottom: 0;
+}
+.list-unstyled {
+  list-style: none;
+}
+// Sections
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+.section {
+  padding: 5rem 0;
+  text-align: center;
+}
+.section-heading,
+.section-description {
+  margin-bottom: 1.2rem;
+}
+
+// Hero
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+.u-hero-divider {
+  border-color: $orange;
+  width: 15rem;
+  margin: 1rem auto;
+}
+.hero-sub-heading {
+ font-size: 2.4rem;
+ margin-bottom: 0;
+}
+.hero-profile-img {
+  border-radius: 50%;
+  border: 2px solid white;
+}
+.contact-icons {
+  list-style: none;
+  margin-bottom: 0;
+}
+.contact-icons-item {
+  display: inline-block;
+  a {
+    border: 2px solid $gray;
+    border-radius: 50%;
+    padding: .5rem;
+    line-height: 1;
+    float: left;
+    margin: 0 .5rem;
+    &:hover {
+      border-color: $orange;
+      svg {
+        fill: $orange;
+      }
+    }
+  }
+  svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    float: left;
+    fill: $gray;
+  }
+
+}
+// Skills
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+.skills {
+  background-image: $abstract-bg;
+  background-size: cover;
+  color: #fff;
+  padding-bottom: 5rem;
+}
+.skills-list {
+  list-style: none;
+}
+// Projects list
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+.projects {
+  .four:nth-child(3n+1){
+    margin-left:0;
+  }
+}
+
+// Footer
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+.footer {
+  background-color: $gray-dark;
+  color: $gray-light;
+  padding: 5rem 0;
+  text-align: center
+}
+// Testimonials
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+.testimonials {
+  background-image: $abstract-bg;
+  background-size: cover;
+  color: white;
+}
+.testimonials .section-description {
+  margin-bottom: 4rem;
+}
+
+// Contact
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+.contact-form {
+  text-align: left;
+}
+
+// Utilities
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+// Grayscale images to colour on hover
+.img-grayscale-color img {
+
+  filter: grayscale(100%);
+  transition: .4s ease-in-out;
+}
+a.img-grayscale-color img:hover {
+  filter: grayscale(0%);
+  transition: .5s ease-in-out;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.55);
+}
+
+
+// Project Details page
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+section.project {
+  text-align: left;
+  .section-description {
+    max-width: 100%;
+  }
+  .slider-nav {
+    img {
+      border: 1px solid $dark-grey;
+      padding: .5rem;
+    }
+    .slick-active {
+      img {
+        border-color: $orange;
+      }
+    }
+    .slick-slide {
+      margin-right: 1rem;
+      &:last-child{
+        margin-right: 0;
+      }
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    .slick-prev:before, .slick-next:before {
+      color: $dark-grey;
+      &:hover {
+        color: $orange;
+      }
+    }
+  }
+}
+.project-release-label {
+  font-weight: 600;
+}
+.project-page {
+  padding: 0;
+  margin: 0;
+  background: rgba(0, 0 , 0, .05);
+}
+.project-header {
+  background: white;
+  padding: 2px 0;
+  border-bottom: 1px solid $gray;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  text-align: center;
+  .icon {
+    width: 2rem;
+    height: 2rem;
+    fill: $light-grey;
+    &:hover {
+      fill: $orange;
+    }
+  }
+}
+.porfolio-gallery {
+  position: relative;
+}
+.list-two-columns {
+    column-count: 2;
+    column-gap: 20px;
+}
+// Project Navigation
+// ----------------------------------------------
+.navigation-button-nav, .navigation-button-back{
+  border: none;
+  padding: 0;
+  line-height: 1;
+}
+.navigation-button-nav {
+  float: left;
+}
+.navigation-button-back{
+  float: right;
+}
+
+// Media Queries
+// ---------------------------------------------
+// Bigger than 550
+@media (min-width: 550px) {
+  .skills-list {
+    width: 75%;
+    margin: 0 auto;
+  }
+  .skills-list-item{
+    width: 50%;
+    float: left;
+    display: inline-block;
+  }
+
+}
+
+// Bigger than 750
+@media (min-width: 750px) {
+  .section-description {
+    max-width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .categories {
+    padding: 15rem 0 8rem;
+  }
+}
+
+// Bigger than 1000
+@media (min-width: 1000px) {
+
+  .skills-list {
+    width: 50%;
+  }
+}

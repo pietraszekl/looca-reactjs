@@ -6,16 +6,21 @@ let Portfolio = React.createClass({
 
 	getInitialState() {
 		return {
+			projectsData :{},
 			projectsList: []
 		}
 	},
-	componentDidMount: function() {
+	componentWillMount() {
 		let self = this;
-		this.loadJSON('./data/looca.json', function(results) {
-			let projects = results.projects;
-			projects.forEach(function(project){
-				self.add(project);
-			});
+		let appData = window.localStorage.getItem("appData");
+		appData = JSON.parse(appData);
+		this.state.projectsData = appData.projects;
+		let projects = appData.projects.list;
+
+		Object.keys(projects).forEach(function(project){
+			let project_id = project;
+			let item = appData.projects.list[project_id];
+			self.add(item);
 		});
 	},
 	add: function(project){
@@ -27,37 +32,16 @@ let Portfolio = React.createClass({
 			projectsList: arr
 		})
 	},
-	eachProject: function(project, i){
-		return (
-			<Project key={i} project={project}/>
-		)
-	},
-	loadJSON(path, success, error){
-		let xhr = new XMLHttpRequest();
-		xhr.onreadystatechange = function(){
-			if (xhr.readyState === XMLHttpRequest.DONE) {
-				if (xhr.status === 200) {
-					if (success) {
-						success(JSON.parse(xhr.responseText));
-					}
-				} else {
-					if(error) {
-						error(xhr);
-					}
-				}
-			}
-		};
-		xhr.open("GET", path, true);
-		xhr.send();
-	},
+
 	render() {
+		const projectsText = this.state.projectsData;
 		const ProjectsList = this.state.projectsList.map((project,i)=>	<Project key={i} project={project}/>);
 
 		return (
 			<section id="projects" class="section projects">
 				<div class="container">
-					<h2 class="section-heading">Clients</h2>
-					<p class="section-description">During my 5+ years of professional experience I have helped build websites and services for well-known companies.</p>
+					<h2 class="section-heading">{projectsText.title}</h2>
+							 <p class="section-description">{projectsText.intro}</p>
 					<div class="row">
 						{ProjectsList}
 					</div>

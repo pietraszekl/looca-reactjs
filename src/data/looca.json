@@ -4,21 +4,94 @@
     "title": "UI Developer",
     "about": "Freelance UI/Front-end developer with proven track-record over five years in creating clean, accessible and user-friendly responsive websites. Self motivated and adaptable, independent minded, with a keen eye for detail. Experienced in working with Agile methodologies.",
     "specialities": "Specialities: HTML5, CSS3, Web Design/Development, RWD, Usability, Web Standards, Axure RP",
+    "photo": "images/looca-side-a.png",
     "cv": {
       "btnTxt": "Download my CV",
       "btnLink": "/documents/Lukasz_Pietraszek_CV.docx"
-    }
+    },
+    "connect": [
+      {
+        "name": "twitter",
+        "link": "https://twitter.com/pietraszekl",
+        "icon": "icon-twitter"
+      },
+      {
+        "name": "linkedin",
+        "link": "https://uk.linkedin.com/in/pietraszekl",
+        "icon": "icon-linkedin"
+      },
+      {
+        "name": "github",
+        "link": "https://github.com/Looca",
+        "icon": "icon-github"
+      },
+      {
+        "name": "google-plus",
+        "link": "https://plus.google.com/109768437210413970058",
+        "icon": "icon-google-plus"
+      }
+    ]
   },
-  "projects" : [
+  "testimonials": [
     {
-      "name": "Monsoon Accessorize",
-      "id": "monsoon",
-      "thumb": "images/clients/monsoon-accessorize-logo.jpg"
+      "name": "Simon Davies",
+      "role": "Lead UI at Portaltech Reply",
+      "text": "Lukasz is a great addition to our UI team at Portaltech Reply. He is a 'go-to' person when you need a quick and complete solution. Technical and with a keen eye for detail, Lukasz also has the rare quality of genuine self drive which has displayed itself whilst being UI project lead for one of our largest global clients."
     },
     {
-      "name": "Delhaize Group",
-      "id": "delhaize",
-      "thumb": "images/clients/delhaize-logo.jpg"
+      "name": "Ali Khan",
+      "role": "UI developer at Portaltech Reply",
+      "text": "I had the pleasure working with lukasz and I have absolutely no hesitation to recommend him to anyone. He is a professional, dedicated and hard working individual who keeps himself up to date with the latest technologies and skills. He is a nice guy and I would love to work with him again in the future."
+    },
+    {
+      "name": "Fabio Salimbeni",
+      "role": "Front-end developer at BioMed Central",
+      "text": "Lukasz has a very good knowledge of CSS3 and HTML5. He is really up to date to the new technics and to new frontiers of web developing. His puts his experience and his skills in his job providing opinions even on the UX side. He is a great worker and while we have worked together I haven’t had to assign him few jobs ‘cause he was able to understand what was needed from him by the company. He is always punctual and he has a great respect of the work that is doing."
     }
-  ]
+  ],
+  "projects" : {
+    "title": "Projects",
+    "intro": "During my 5+ years of professional experience I have helped build websites and services for well-known companies.",
+    "list":{
+      "monsoon": {
+        "name": "Monsoon Accessorize",
+        "id": "monsoon",
+        "logo": "images/clients/monsoon-accessorize-logo.jpg",
+        "desc": "I've been working on numbers of change request related to mini basket, checkout view, product grid view and product details pages for both Monsoon and Accessorize sites as well as fixing reported bugs.",
+        "links": [
+          {
+            "text": "Visit Monsoon website",
+            "url": "http://uk.monsoon.co.uk/"
+          },
+          {
+            "text": "Visit Accessorize website",
+            "url": "http://uk.accessorize.com/"
+          }
+        ],
+        "year": "2013",
+        "tech": ["Hybris CMS", "jQuery", "CSS"],
+        "img": ["/images/monsoon/monsoon-1.jpg","/images/monsoon/monsoon-2.jpg" ]
+
+      },
+      "delhaize": {
+        "name": "Delhaize Group",
+        "id": "delhaize",
+        "logo": "images/clients/delhaize-logo.jpg",
+        "desc": "Developing two e-grocery shops for Delhaize Group. French/Belgian version consist of eshop as well as 'Loyalty on Web' which allows customers to register loyalty cards and to accrue points on purchases where they present the registered card. These were build using Bootstrap 2 and Less. Greek version of e-shop and corporate platform were build using Bootstrap 3 and Sass.",
+        "links": [
+          {
+            "text": "Visit Delahize website",
+            "url": "http://shop.delhaize.be/"
+          },
+          {
+            "text": "Visit AB website",
+            "url": "http://www.ab.gr/click2shop/"
+          }
+        ],
+        "year": "2013/2014",
+        "tech":["Hybris CMS", "Bootstrap 2 & 3", "JavaScript", "Sass/Less"],
+        "img":["images/delhaize/delhaize-1.jpg", "images/delhaize/delhaize-2.jpg"]
+      }
+    }
+  }
 }
