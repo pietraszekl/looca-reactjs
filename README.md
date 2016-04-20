@@ -5,6 +5,7 @@ https://www.youtube.com/playlist?list=PLoYCgNOIyGABj2GQSlDRjgvXtqfDxKm5b)
 
 Install required modules: `npm install`
 
-run dev env: `npm run dev`
+run dev envirnoment and local host: `npm run dev`
+build for production: `npm run build`
 
 server on: `localhost:8080`

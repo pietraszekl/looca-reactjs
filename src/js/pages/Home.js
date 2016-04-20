@@ -1,6 +1,4 @@
 import React from "react";
-import {Link} from "react-router";
-
 import Hero from "../components/Hero";
 import Skills from "../components/Skills";
 import Portfolio from "../components/Portfolio";
