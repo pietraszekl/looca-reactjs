@@ -1,7 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import {Router, Route, IndexRoute} from "react-router";
-import createBrowserHistory from 'history/lib/createBrowserHistory'
+import {Router, Route, IndexRoute, browserHistory} from "react-router";
 import ContactPage from "./pages/Contact";
 import PortfolioPage from "./pages/Portfolio";
 import ProjectPage from "./pages/Project";
@@ -13,7 +12,7 @@ import TestimonialsPage from "./pages/Testimonials";
 const app = document.getElementById("app");
 
 ReactDOM.render(
-  <Router history={createBrowserHistory()}>
+  <Router history={browserHistory}>
     <Route path="/" component={LayoutPage}>
       <IndexRoute component={HomePage}></IndexRoute>
       <Route path="portfolio" name="portfolio" component={PortfolioPage}></Route>
