@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import {Router, Route, IndexRoute, browserHistory} from "react-router";
+import {Router, Route, IndexRoute, useRouterHistory} from "react-router";
+import {createHashHistory} from 'history';
 import ContactPage from "./pages/Contact";
 import PortfolioPage from "./pages/Portfolio";
 import ProjectPage from "./pages/Project";
@@ -8,11 +9,11 @@ import HomePage from "./pages/Home";
 import LayoutPage from "./pages/Layout";
 import TestimonialsPage from "./pages/Testimonials";
 
-
+const appHistory = useRouterHistory(createHashHistory)({ queryKey: false });
 const app = document.getElementById("app");
 
 ReactDOM.render(
-  <Router history={browserHistory}>
+  <Router history={appHistory}>
     <Route path="/" component={LayoutPage}>
       <IndexRoute component={HomePage}></IndexRoute>
       <Route path="portfolio" name="portfolio" component={PortfolioPage}></Route>

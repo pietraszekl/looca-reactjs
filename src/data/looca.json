@@ -37,7 +37,7 @@
       }
     ]
   },
-  "footnote": "Made in UK by Lukasz Pietraszek. Built using ReactJS, Webpack and Sass.",
+  "footnote": "Built by Lukasz Pietraszek using ReactJS, Webpack and Sass. Looca Ltd is a company registered in England and Wales. Company No. 9712646, VAT No. 220849712",
   "testimonials": [
     {
       "name": "Simon Davies",
@@ -57,8 +57,68 @@
   ],
   "projects" : {
     "title": "Projects",
-    "intro": "During my 5+ years of professional experience I have helped build websites and services for well-known companies.",
+    "intro": "During my 5+ years of professional experience I have helped build websites and services for well-known companies - B2C and B2B as well as for independet artisits an charities. Click on the logos of selected projects for more details.",
     "list":{
+      "gucci": {
+        "name": "Gucci",
+        "id": "gucci",
+        "logo": "gucci-logo.jpg",
+        "desc": "Working at DigitasLbi Commerce (previously known as Sceneric). on integrating front-end prototype with Hybris CMS for Gucci's new ecommerce website.",
+        "links": [
+          {
+            "text": "Visit Gucci website",
+            "url": "https://www.gucci.com/us/en/"
+          }
+        ],
+        "year": "2015/2016",
+        "tech": ["Hybris CMS", "Sass", "Grunt", "jQuery", "RequireJS", "AJAX", "Handlebars", "Git"],
+        "img": [
+          {
+            "src": "/images/gucci/gucci-1.jpg",
+            "altText": "Gucci website"
+            }
+          ]
+      },
+      "stelladot": {
+        "name": "Stella & Dot",
+        "id": "stelladot",
+        "logo": "stelladot-logo.jpg",
+        "desc": "Working on converting static pages to Angular based templates. Collaborating with team in US (San Francisco) in delivering new layouts for European version of the website. Creating custom responsive pages and developing prototypes for marketing team.",
+        "links": [
+          {
+            "text": "Visit Stella & Dot",
+            "url": "http://www.stelladot.com/"
+          }
+        ],
+        "year": "2016",
+        "tech": ["jQuery", "AJAX", "AngularJS", "Git"],
+        "img": [
+          {
+            "src": "/images/stelladot/stelladot-1.jpg",
+            "altText": "Stella & Dot website"
+            }
+          ]
+      },
+      "jackwills": {
+        "name": "Jack Wills",
+        "id": "jackwills",
+        "logo": "jackwills-logo.jpg",
+        "desc": "Maintaining and bug fixing main website. Tech stack: Demandware CMS, RequireJS, HTML, LESS Maintaining and bug fixing main website as well as creating micro pages using AngularJS.",
+        "links": [
+          {
+            "text": "Visit Jack Wills",
+            "url": "http://www.stelladot.com/"
+          }
+        ],
+        "year": "2015",
+        "tech": ["HTML5", "Less", "Grunt", "jQuery", "AJAX", "AngularJS","RequireJS", "Handlebars","GSAP",  "Git"],
+        "img": [
+          {
+            "src": "/images/jackwills/jackwills-1.jpg",
+            "altText": "Jack Wills website"
+            }
+          ]
+      },
       "monsoon": {
         "name": "Monsoon Accessorize",
         "id": "monsoon",
@@ -99,7 +159,7 @@
           }
         ],
         "year": "2013/2014",
-        "tech":["Hybris CMS", "Bootstrap 2 & 3", "JavaScript", "Sass/Less"],
+        "tech":["Hybris CMS", "Bootstrap 2 & 3", "JavaScript", "Sass&Less"],
         "img":[
           {
             "src": "/images/delhaize/delhaize-1.jpg",

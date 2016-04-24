@@ -3,11 +3,9 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>Lukasz Pietraszek - UI Developer</title>
-	<meta name="description" content="Freelance UI/Front-end developer with proven track-record over five years in creating clean, accessible and user-friendly responsive websites">
+	<title>Lukasz Pietraszek - Freelance UI Developer - London</title>
+	<meta name="description" content="London based freelance UI & Front End developer with proven track-record over five years in creating responsive websites for B2C and B2B clients">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-
 	<script type="application/ld+json">
 	{
 		"@context" : "http://schema.org",
@@ -21,9 +19,20 @@
 		]
 	}
 	</script>
+	<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', 'UA-12509524-5', 'auto');
+	ga('require', 'linkid');
+	ga('send', 'pageview');
+	</script>
 </head>
 
 <body>
+
 	<svg display="none" width="0" height="0" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 		<defs>
 			<symbol id="icon-chevron-right" viewBox="0 0 1024 1024">
@@ -66,37 +75,30 @@
 	<div id="app"></div>
 	<script src="client.min.js"></script>
 	<script>
-			WebFontConfig = {
-					google: { families: [ 'Raleway:300,400,600:latin' ] }
-			};
+	WebFontConfig = {
+		google: { families: [ 'Raleway:300,400,600:latin' ] }
+	};
 
-			var cb = function() {
-					var wf = document.createElement('script');
-					wf.src = '//ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
-					wf.type = 'text/javascript';
-					wf.async = 'true';
-					var s = document.getElementsByTagName('script')[0];
-					s.parentNode.insertBefore(wf, s);
-			};
+	var cb = function() {
+		var wf = document.createElement('script');
+		wf.src = '//ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+		wf.type = 'text/javascript';
+		wf.async = 'true';
+		var s = document.getElementsByTagName('script')[0];
+		s.parentNode.insertBefore(wf, s);
+	};
 
-			var raf = requestAnimationFrame || mozRequestAnimationFrame || webkitRequestAnimationFrame || msRequestAnimationFrame;
+	var raf = requestAnimationFrame || mozRequestAnimationFrame || webkitRequestAnimationFrame || msRequestAnimationFrame;
 
-			if (raf) {
-					raf(cb);
-			} else {
-					window.addEventListener('load', cb);
-			}
+	if (raf) {
+		raf(cb);
+	} else {
+		window.addEventListener('load', cb);
+	}
 	</script>
-	<script>
-		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-		ga('create', 'UA-12509524-5', 'auto');
-		ga('send', 'pageview');
 
-</script>
+
 </body>
 
 </html>
