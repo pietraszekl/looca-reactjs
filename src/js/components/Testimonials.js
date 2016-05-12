@@ -1,5 +1,5 @@
 import React from "react";
-import Testimonial from "./Testimonial";
+import Slideshow from "./Slideshow/Slideshow";
 
 let Testimonials = React.createClass({
 	getInitialState() {
@@ -13,15 +13,13 @@ let Testimonials = React.createClass({
 	},
 	render() {
 
-		const TestimonialsList = this.state.data.testimonials.map((testimonial,i)=>	<Testimonial key={i} testimonial={testimonial}/>);
-
 		return (
 			<section class="section testimonials">
 				<div class="container">
 					<h2 class="section-heading">Testimonials</h2>
 
 					<div class="row testimonials-list">
-						{TestimonialsList}
+						<Slideshow data={this.state.data.testimonials}/>
 					</div>
 				</div>
 			</section>

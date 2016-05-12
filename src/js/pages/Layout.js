@@ -4,34 +4,35 @@ require('../../styles/main.scss');
 let LayoutPage = React.createClass({
 	getInitialState(){
 		return {
-			response: "waiting"
+			isLoading: true
 		}
 	},
 	init(){
 		const days = 30; // Reset when storage is more than 31 days
 		const timeNow = new Date().getTime();
 		const setupTime = localStorage.getItem('loocaSetupTime');
+		const url = './data/looca.json';
 		if (setupTime == null) {
 			localStorage.setItem('loocaSetupTime', timeNow);
-			this.setData();
+			this.setData(url);
 		} else {
 			if(timeNow - setupTime > days*24*60*60*1000) {
 				localStorage.removeItem('loocaSetupTime');
 				localStorage.setItem('loocaSetupTime', timeNow);
-				this.setData();
+				this.setData(url);
 			} else {
-				this.setState({'response':'ready'});
+				this.setState({isLoading:false});
 			}
 		}
 	},
 	componentWillMount(){
 		this.init();
 	},
-	setData(){
+	setData(url){
 		let self = this;
-		self.loadJSON('./data/looca.json', function(results) {
+		self.loadJSON(url, function(results) {
 			window.localStorage.setItem("appData", JSON.stringify(results));
-			self.setState({'response':'ready'});
+			self.setState({isLoading:false});
 		});
 	},
 	loadJSON(path, success, error){
@@ -54,7 +55,7 @@ let LayoutPage = React.createClass({
 	},
 	render() {
 		let PageContent = "Loading...";
-		if(this.state.response == "ready"){
+		if(this.state.isLoading == false){
 			PageContent =	this.props.children;
 		}
 		return (
