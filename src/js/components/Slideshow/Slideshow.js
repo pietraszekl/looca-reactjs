@@ -27,7 +27,7 @@ class Slideshow extends React.Component{
 			<div className="slideshow">
 				<Slides data={this.state.data} currentSlide={this.state.current}/>
 				<Controls />
-				<Pagination data={this.state.data} />
+				<Pagination data={this.state.data} currentSlide={this.state.current}/>
 			</div>
 		);
 	}
