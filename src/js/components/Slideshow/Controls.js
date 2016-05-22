@@ -5,6 +5,13 @@ class Controls extends React.Component{
   constructor(){
     super();
   }
+  componentWillMount(){
+    if(this.props.isAutoRotate){
+      setInterval(function(){
+        SlideshowActions.autoRotate()
+      }, this.props.isAutoRotate);
+    }
+  }
   slidePrev() {
     SlideshowActions.prevSlide()
   }
@@ -12,10 +19,16 @@ class Controls extends React.Component{
     SlideshowActions.nextSlide()
   }
   render() {
-    return (
-      <div className="slideshow__nav">
+    let Controls = '';
+    if(this.props.isVisible){
+      Controls = <div className="slideshow__nav">
         <div className="slides-nav slides-nav--prev" onClick={this.slidePrev.bind(this)}></div>
         <div className="slides-nav slides-nav--next" onClick={this.slideNext.bind(this)}></div>
+      </div>
+    }
+    return (
+      <div>
+        {Controls}
       </div>
     );
   }

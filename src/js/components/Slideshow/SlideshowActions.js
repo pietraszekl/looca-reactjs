@@ -18,3 +18,8 @@ export function toggleSlide(id){
     source: id
   });
 }
+export function autoRotate(){
+  dispatcher.dispatch({
+    type: "AUTO_ROTATE"
+  });
+}

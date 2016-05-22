@@ -19,13 +19,16 @@ class Pagination extends React.Component{
     })
   }
   render() {
-    var self = this;
-    var PaginationList = this.data.map(function (pager, i) {
-      var isActive = self.state.currentSlide === i;
-      return (
-        <Pager active={isActive} id={pager.id} key={pager.id} />
-      );
-    });
+    var PaginationList = [];
+    if(this.props.isVisible){
+      var self = this;
+      PaginationList = this.data.map(function (pager, i) {
+        var isActive = self.state.currentSlide === i;
+        return (
+          <Pager active={isActive} id={pager.id} key={pager.id} />
+        );
+      });
+    }
     return (
       <div className="pagination">
         {PaginationList}

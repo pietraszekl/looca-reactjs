@@ -1,5 +1,6 @@
 import React from "react";
 import Slide from "./Slide";
+import * as SlideshowActions from "./SlideshowActions";
 import SlideshowStore from "./SlideshowStore";
 
 class Slides extends React.Component{

@@ -9,7 +9,7 @@ require('./slideshow.scss');
 class Slideshow extends React.Component{
 	constructor(props) {
 		super();
-		const slides = props.data;
+		const slides = props.config.data;
 		this.state = {
 			data: SlideshowStore.getAll(slides),
 			current: SlideshowStore.currentSlide
@@ -22,12 +22,18 @@ class Slideshow extends React.Component{
 			})
 		})
 	}
+
 	render() {
+		const slideshow = this.state;
+		const slideshowConfig = this.props.config;
+		const showControls = (typeof slideshowConfig.controls === "undefined") ? true : slideshowConfig.controls;
+		const showPagination = (typeof slideshowConfig.pagination === "undefined") ? true : slideshowConfig.pagination;
+		const autoRotateSpeed = (typeof slideshowConfig.autorotate === "undefined") ? false : slideshowConfig.autorotate;
 		return (
 			<div className="slideshow">
-				<Slides data={this.state.data} currentSlide={this.state.current}/>
-				<Controls />
-				<Pagination data={this.state.data} currentSlide={this.state.current}/>
+				<Slides data={slideshow.data} currentSlide={slideshow.current}/>
+				<Controls isVisible={showControls} isAutoRotate={autoRotateSpeed}/>
+				<Pagination isVisible={ showPagination} data={slideshow.data} currentSlide={slideshow.current}/>
 			</div>
 		);
 	}

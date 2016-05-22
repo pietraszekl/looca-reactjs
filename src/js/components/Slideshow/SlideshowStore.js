@@ -50,6 +50,9 @@ class SlideshowStore extends EventEmitter{
       case "TOGGLE_SLIDE":
       this.toggleSlide(action.source)
       break;
+      case "AUTO_ROTATE":
+      this.nextSlide()
+      break; 
     }
   }
 }
