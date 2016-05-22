@@ -2,6 +2,7 @@ import React from "react";
 import SlideshowStore from "./SlideshowStore";
 import Slides from "./Slides";
 import Controls from "./Controls";
+import Pagination from "./Pagination";
 
 require('./slideshow.scss');
 
@@ -26,6 +27,7 @@ class Slideshow extends React.Component{
 			<div className="slideshow">
 				<Slides data={this.state.data} currentSlide={this.state.current}/>
 				<Controls />
+				<Pagination data={this.state.data} />
 			</div>
 		);
 	}

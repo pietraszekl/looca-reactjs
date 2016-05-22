@@ -1,7 +1,6 @@
 import {EventEmitter} from "events";
 import dispatcher from "../../dispatcher";
 
-
 class SlideshowStore extends EventEmitter{
   constructor(){
     super();
@@ -30,6 +29,16 @@ class SlideshowStore extends EventEmitter{
     this.currentSlide = prev;
     this.emit("change");
   }
+  toggleSlide(id){
+    var index = this.slides.map(function(el) {
+      return (
+        el.id
+      );
+    });
+    var currentIndex = index.indexOf(id);
+    this.currentSlide = currentIndex;
+    this.emit("change");
+  }
   handleActions(action){
     switch (action.type) {
       case "NEXT_SLIDE":
@@ -38,9 +47,11 @@ class SlideshowStore extends EventEmitter{
       case "PREV_SLIDE":
       this.prevSlide()
       break;
+      case "TOGGLE_SLIDE":
+      this.toggleSlide(action.source)
+      break;
     }
   }
-
 }
 
 const slideshowStore = new SlideshowStore;
