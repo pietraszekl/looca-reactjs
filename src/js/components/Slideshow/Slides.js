@@ -1,5 +1,3 @@
-'use strict';
-
 import React from "react";
 import Slide from "./Slide";
 import * as SlideshowActions from "./SlideshowActions";

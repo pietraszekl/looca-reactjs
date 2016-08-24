@@ -1,5 +1,3 @@
-'use strict';
-
 import dispatcher from "../../dispatcher";
 
 export function nextSlide(){

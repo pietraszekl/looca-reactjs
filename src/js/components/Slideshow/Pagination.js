@@ -1,5 +1,3 @@
-'use strict';
-
 import React from "react";
 import Pager from "./Pager";
 import SlideshowStore from "./SlideshowStore";

@@ -1,5 +1,3 @@
-'use strict';
-
 import React from "react";
 import SlideshowStore from "./SlideshowStore";
 import Slides from "./Slides";
