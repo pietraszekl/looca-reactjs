@@ -1,3 +1,5 @@
+'use strict';
+
 import {EventEmitter} from "events";
 import dispatcher from "../../dispatcher";
 
@@ -7,6 +9,7 @@ class SlideshowStore extends EventEmitter{
     this.currentSlide = 0;
     this.slides = [];
   }
+
   getAll(slides){
     this.slides = slides;
     return this.slides;
@@ -52,7 +55,7 @@ class SlideshowStore extends EventEmitter{
       break;
       case "AUTO_ROTATE":
       this.nextSlide()
-      break; 
+      break;
     }
   }
 }

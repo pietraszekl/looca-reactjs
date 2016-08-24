@@ -1,3 +1,5 @@
+'use strict';
+
 import React from "react";
 import * as SlideshowActions from "./SlideshowActions";
 
@@ -5,12 +7,17 @@ class Controls extends React.Component{
   constructor(){
     super();
   }
-  componentWillMount(){
+  componentDidMount(){
+    this.interval = setInterval(function(){
+      SlideshowActions.autoRotate()
+    }, this.props.isAutoRotate);
     if(this.props.isAutoRotate){
-      setInterval(function(){
-        SlideshowActions.autoRotate()
-      }, this.props.isAutoRotate);
+      this.interval;
     }
+  }
+  componentWillUnmount () {
+    // Make sure to reset invterval otherwise it results in error
+    clearInterval(this.interval);
   }
   slidePrev() {
     SlideshowActions.prevSlide()

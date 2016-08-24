@@ -55,7 +55,7 @@ let LayoutPage = React.createClass({
 	},
 	render() {
 		let PageContent = "Loading...";
-		if(this.state.isLoading == false){
+		if(this.state.isLoading === false){
 			PageContent =	this.props.children;
 		}
 		return (

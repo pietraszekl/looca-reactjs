@@ -99,6 +99,25 @@ textarea:focus, select:focus, input[type="reset"]:hover, input[type="email"]:foc
   .four:nth-child(3n+1){
     margin-left:0;
   }
+  .project-thumbnail {
+    position: relative;
+    .view-more {
+
+      position: absolute;
+      bottom: 5px;
+      width: 100%;
+      text-align: center;
+      font-size: 1.2rem;
+      transition: opacity .5s ease-in-out;
+      opacity: 0;
+    }
+    &:hover {
+      .view-more{
+        display: block;
+        opacity: 1;
+      }
+    }
+  }
 }
 
 // Footer
@@ -139,14 +158,19 @@ textarea:focus, select:focus, input[type="reset"]:hover, input[type="email"]:foc
   border: 0;
 }
 // Grayscale images to colour on hover
-.img-grayscale-color img {
+.img-grayscale-color {
+  img{
     @include grayscale_element(100%);
     transition: .4s ease-in-out;
-    &:hover {
-        @include grayscale_element(0);
-        transition: .5s ease-in-out;
-        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.55);
+  }
+  &:hover {
+    img {
+      @include grayscale_element(0);
+      transition: .5s ease-in-out;
+      box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.55);
     }
+
+  }
 }
 
 // Project Details page
