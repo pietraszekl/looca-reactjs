@@ -31,7 +31,7 @@ class Slideshow extends React.Component{
 		const autoRotateSpeed = (typeof slideshowConfig.autorotate === "undefined") ? false : slideshowConfig.autorotate;
 		return (
 			<div className="slideshow">
-				<Slides data={slideshow.data} currentSlide={slideshow.current}/>
+				<Slides slideshowType={slideshowConfig.slideshowType} data={slideshow.data} currentSlide={slideshow.current}/>
 				<Controls isVisible={showControls} isAutoRotate={autoRotateSpeed}/>
 				<Pagination isVisible={ showPagination} data={slideshow.data} currentSlide={slideshow.current}/>
 			</div>

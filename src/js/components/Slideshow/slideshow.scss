@@ -32,17 +32,20 @@
       &:after{
         display: table-cell;
         vertical-align:middle;
+        text-align: center;
       }
       &--prev {
         left: 0;
         &:after {
-          content: '«'
+          content: '«';
+          color: white;
         }
       }
       &--next {
         right: 0;
         &:after {
-          content: '»'
+          content: '»';
+          color: white;
         }
       }
     }
@@ -56,6 +59,7 @@
   .pagination {
     width: 100%;
     float: left;
+    text-align: center;
     &__item {
       display: inline-block;
       width: 10px;

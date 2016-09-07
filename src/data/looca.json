@@ -93,11 +93,11 @@
         "year": "2016",
         "tech": ["jQuery", "AJAX", "AngularJS", "Git"],
         "img": [
-          {
+          { "id": "1",
             "src": "/images/stelladot/stelladot-1.jpg",
             "altText": "Stella & Dot website"
-            }
-          ]
+          }
+        ]
       },
       "jackwills": {
         "name": "Jack Wills",
@@ -114,9 +114,15 @@
         "tech": ["HTML5", "Less", "Grunt", "jQuery", "AJAX", "AngularJS","RequireJS", "Handlebars","GSAP",  "Git"],
         "img": [
           {
+            "id":"1",
             "src": "/images/jackwills/jackwills-1.jpg",
             "altText": "Jack Wills website"
-            }
+          },
+          {
+            "id":"2",
+            "src": "/images/jackwills/jackwills-2.jpg",
+            "altText": "Jack Wills website"
+          }
           ]
       },
       "monsoon": {

@@ -4,17 +4,31 @@ import ProjectNavigation from "./ProjectNavigation";
 import ProjectDetailsLink from "./ProjectDetailsLink";
 import ProjectDetailsTech from "./ProjectDetailsTech";
 import ProjectDetailsImages from "./ProjectDetailsImages";
+import Slideshow from "../Slideshow/Slideshow";
 
-let ProjectDetails = React.createClass({
-	getInitialState() {
-		return {
+class ProjectDetails extends React.Component{
+
+	constructor(props) {
+		super();
+		this.state = {
 			data: {}
 		}
-	},
+	}
+
 	componentWillMount() {
+		const project_id = this.props.project;
 		const appData = window.localStorage.getItem("appData");
 		this.state.data = JSON.parse(appData);
-	},
+		this.slideshowConfig.data = this.state.data.projects.list[project_id].img;
+	}
+
+	slideshowConfig = {
+		data: [],
+		slideshowType: 'image',
+		pagination: true,
+		controls: true,
+		autorotate : 500000
+	}
 
 	render() {
 		const project_id = this.props.project;
@@ -25,8 +39,6 @@ let ProjectDetails = React.createClass({
 		const ProjectTechList = project_data.tech.map((tech,i)=>	<ProjectDetailsTech key={i} tech={tech}/>);
 
 		const ProjectImages = project_data.img.map((image,i)=>	<ProjectDetailsImages key={i} image={image}/>);
-
-
 
 		return (
 			<div>
@@ -52,17 +64,14 @@ let ProjectDetails = React.createClass({
 						</div>
 					</div>
 					<div class="row">
-					 <div class="columns">
-							 <div class="slider slider-for">
-								 {ProjectImages}
-							 </div>
-					 </div>
+
+								 <Slideshow config={this.slideshowConfig}/>
+
 			 </div>
 				</div>
 			</section>
 			</div>
 		);
 	}
-});
-
-module.exports = ProjectDetails;
+}
+export default ProjectDetails;

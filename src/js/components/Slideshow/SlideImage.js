@@ -1,17 +1,16 @@
 import React from "react";
 
-class Slide extends React.Component{
+class SlideImage extends React.Component{
 	constructor() {
 		super();
 	}
 	render() {
 		return (
 			<div className={this.props.active ? "slide slide--active ": "" + "slide"}>
-				<p>{this.props.text}</p>
-				<p>{this.props.caption}</p>
+				<img className="u-max-full-width" src={this.props.image} alt={this.props.altText}/>
 			</div>
 		);
 	}
 }
 
-export default Slide;
+export default SlideImage;
