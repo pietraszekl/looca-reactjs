@@ -1,15 +1,17 @@
 import React from "react";
 
-let Footer = React.createClass({
-	getInitialState() {
-		return {
+class Footer extends React.Component{
+	constructor() {
+		super();
+		this.state = {
 			data: {}
 		}
-	},
+	}
+
 	componentWillMount() {
 		const appData = window.localStorage.getItem("appData");
 		this.state.data = JSON.parse(appData);
-	},
+	}
 	render() {
 		const footerData = this.state.data.footnote;
 		return (
@@ -20,6 +22,6 @@ let Footer = React.createClass({
 			</footer>
 		);
 	}
-});
+}
 
-module.exports = Footer;
+export default Footer;

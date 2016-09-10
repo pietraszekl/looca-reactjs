@@ -7,14 +7,12 @@ import ProjectDetailsImages from "./ProjectDetailsImages";
 import Slideshow from "../Slideshow/Slideshow";
 
 class ProjectDetails extends React.Component{
-
-	constructor(props) {
+	constructor() {
 		super();
 		this.state = {
 			data: {}
 		}
 	}
-
 	componentWillMount() {
 		const project_id = this.props.project;
 		const appData = window.localStorage.getItem("appData");
@@ -27,7 +25,7 @@ class ProjectDetails extends React.Component{
 		slideshowType: 'image',
 		pagination: true,
 		controls: true,
-		autorotate : 500000
+		autorotate : 5000
 	}
 
 	render() {

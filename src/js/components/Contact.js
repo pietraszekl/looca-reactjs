@@ -1,6 +1,10 @@
 import React from "react";
 
-let Contact = React.createClass({
+class Contact extends React.Component{
+	constructor() {
+		super();
+	}
+
 	render() {
 		const hiddenEl = {
 			display: 'none'
@@ -31,6 +35,6 @@ let Contact = React.createClass({
 			</section>
 		);
 	}
-});
+}
 
-module.exports = Contact;
+export default Contact;

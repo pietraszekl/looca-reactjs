@@ -10,19 +10,23 @@ class Slideshow extends React.Component{
 	constructor(props) {
 		super();
 		const slides = props.config.data;
+		this.getCurrentSlide = this.getCurrentSlide.bind(this);
 		this.state = {
 			data: SlideshowStore.getAll(slides),
-			current: SlideshowStore.currentSlide
+			current: 1
 		}
 	}
 	componentWillMount(){
-		SlideshowStore.on("change", ()=>{
-			this.setState({
-				current: SlideshowStore.currentSlide
-			})
+		SlideshowStore.on("change", this.getCurrentSlide);
+	}
+	componentWillUnmount(){
+		SlideshowStore.removeListener("change", this.getCurrentSlide);
+	}
+	getCurrentSlide(){
+		this.setState({
+			current: SlideshowStore.currentSlide
 		})
 	}
-
 	render() {
 		const slideshow = this.state;
 		const slideshowConfig = this.props.config;

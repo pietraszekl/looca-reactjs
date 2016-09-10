@@ -1,6 +1,6 @@
 import React from "react";
 
-let SocialLink = React.createClass({
+class SocialLink extends React.Component{
 	render() {
 		const connect = this.props.connect;
 
@@ -13,6 +13,6 @@ let SocialLink = React.createClass({
 			</li>
 		);
 	}
-});
+}
 
-module.exports = SocialLink;
+export default SocialLink;

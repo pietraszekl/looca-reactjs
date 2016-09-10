@@ -1,16 +1,18 @@
 import React from "react";
 import SocialLink from "./SocialLink";
 
-const Hero = React.createClass({
-	getInitialState() {
-		return {
+class Hero extends React.Component{
+	constructor() {
+		super();
+		this.state = {
 			data: {}
 		}
-	},
+	}
+
 	componentWillMount() {
 		const appData = window.localStorage.getItem("appData");
 		this.state.data = JSON.parse(appData);
-	},
+	}
 
 	render() {
 		const person = this.state.data.lukasz;
@@ -29,7 +31,6 @@ const Hero = React.createClass({
 							{ConnectList}
 						</ul>
 						<p class="section-description">{person.about}</p>
-
 						<p class="section-description">{person.specialities}</p>
 						<a href={person.cv.btnLink} class="button" target="blank">{person.cv.btnTxt}</a>
 					</div>
@@ -37,6 +38,6 @@ const Hero = React.createClass({
 			</section>
 		);
 	}
-});
+}
 
-module.exports = Hero;
+export default Hero;

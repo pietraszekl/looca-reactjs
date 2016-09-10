@@ -9,24 +9,29 @@ class Slides extends React.Component{
 		super();
 		this.currentSlide = props.currentSlide;
 		this.data = props.data;
+		this.getCurrentSlide = this.getCurrentSlide.bind(this);
 		this.slideType = props.slideType;
 		this.state = {
 			currentSlide: this.currentSlide,
 		}
 	}
 	componentWillMount(){
-		SlideshowStore.on("change", ()=>{
-			this.setState({
-				currentSlide: SlideshowStore.currentSlide
-			})
+		SlideshowStore.on("change", this.getCurrentSlide);
+	}
+	componentWillUnmount(){
+		SlideshowStore.removeListener("change", this.getCurrentSlide);
+	}
+	getCurrentSlide(){
+		this.setState({
+			currentSlide: SlideshowStore.currentSlide
 		})
 	}
+
 	render() {
 		const self = this;
-		console.log(self.props.slideshowType);
 		const SlidesList = this.data.map(function (slide, i) {
-			const isActive = self.state.currentSlide === i;
-	 switch (self.props.slideshowType) {
+		const isActive = self.state.currentSlide === i;
+	 	switch (self.props.slideshowType) {
 		 case "image":
 		 return (
 			 <SlideImage active={isActive} key={slide.id} image={slide.src} altText={slide.altText}/>

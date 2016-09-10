@@ -7,15 +7,20 @@ class Pagination extends React.Component{
     super();
     this.currentSlide = props.currentSlide
     this.data = props.data;
+    this.getCurrentSlide = this.getCurrentSlide.bind(this);
     this.state={
       currentSlide: this.currentSlide,
     }
   }
   componentWillMount(){
-    SlideshowStore.on("change", ()=>{
-      this.setState({
-        currentSlide: SlideshowStore.currentSlide
-      })
+    SlideshowStore.on("change", this.getCurrentSlide)
+  }
+  componentWillUnmount(){
+    SlideshowStore.removeListener("change", this.getCurrentSlide)
+  }
+  getCurrentSlide(){
+    this.setState({
+      currentSlide: SlideshowStore.currentSlide
     })
   }
   render() {
