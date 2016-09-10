@@ -13,7 +13,7 @@ const appHistory = useRouterHistory(createHashHistory)({ queryKey: false });
 const app = document.getElementById("app");
 
 ReactDOM.render(
-  <Router history={appHistory}>
+  <Router history={appHistory} onUpdate={() => window.scrollTo(0, 0)}>
     <Route path="/" component={LayoutPage}>
       <IndexRoute component={HomePage}></IndexRoute>
       <Route path="portfolio" name="portfolio" component={PortfolioPage}></Route>
