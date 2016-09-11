@@ -2,9 +2,6 @@ import React from "react";
 import * as SlideshowActions from "./SlideshowActions";
 
 class Controls extends React.Component{
-  constructor(){
-    super();
-  }
   componentDidMount(){
     this.interval = setInterval(function(){
       SlideshowActions.autoRotate()

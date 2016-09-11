@@ -3,8 +3,7 @@ import Hero from "../components/Hero";
 import Testimonials from "../components/Testimonials";
 import Footer from "../components/Footer";
 
-
-let TestimonialsPage = React.createClass({
+class TestimonialsPage extends React.Component{
 	render() {
 		return (
 			<div>
@@ -13,6 +12,6 @@ let TestimonialsPage = React.createClass({
 			</div>
 		);
 	}
-});
+}
 
-module.exports = TestimonialsPage;
+export default TestimonialsPage;

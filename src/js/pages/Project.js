@@ -2,7 +2,7 @@ import React from "react";
 import Footer from "../components/Footer";
 import ProjectDetails from "../components/ProjectDetails/ProjectDetails"
 
-let ProjectPage = React.createClass({
+class ProjectPage extends React.Component{
 	render() {
 		const {params} = this.props;
 		return (
@@ -12,6 +12,6 @@ let ProjectPage = React.createClass({
 			</div>
 		);
 	}
-});
+}
 
-module.exports = ProjectPage;
+export default ProjectPage;

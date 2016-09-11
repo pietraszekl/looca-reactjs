@@ -1,9 +1,6 @@
 import React from "react";
 
 class SlideImage extends React.Component{
-	constructor() {
-		super();
-	}
 	render() {
 		return (
 			<div className={this.props.active ? "slide slide--active ": "" + "slide"}>

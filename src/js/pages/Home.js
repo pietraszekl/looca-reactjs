@@ -6,7 +6,7 @@ import Testimonials from "../components/Testimonials";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 
-let HomePage = React.createClass({
+class HomePage extends React.Component{
 	render() {
 		return (
 			<div>
@@ -19,6 +19,6 @@ let HomePage = React.createClass({
 			</div>
 		);
 	}
-});
+}
 
-module.exports = HomePage;
+export default HomePage;

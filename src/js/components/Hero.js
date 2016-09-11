@@ -18,21 +18,21 @@ class Hero extends React.Component{
 		const person = this.state.data.lukasz;
 		const ConnectList = person.connect.map((connect,i)=>	<SocialLink key={i} connect={connect}/>);
 		return (
-			<section class="section hero">
-				<div class="container">
-					<div class="row">
-						<div class="hero-profile-img">
-							<img class="side-front" src={person.photo} alt={person.name} />
+			<section className="section hero">
+				<div className="container">
+					<div className="row">
+						<div className="hero-profile-img">
+							<img className="side-front" src={person.photo} alt={person.name} />
 						</div>
-						<h2 class="hero-sub-heading">{person.title}</h2>
-						<hr class="u-hero-divider" />
-						<h1 class="hero-heading">{person.name}</h1>
-						<ul class="contact-icons twelve columns">
+						<h2 className="hero-sub-heading">{person.title}</h2>
+					<hr className="u-hero-divider" />
+				<h1 className="hero-heading">{person.name}</h1>
+			<ul className="contact-icons twelve columns">
 							{ConnectList}
 						</ul>
-						<p class="section-description">{person.about}</p>
-						<p class="section-description">{person.specialities}</p>
-						<a href={person.cv.btnLink} class="button" target="blank">{person.cv.btnTxt}</a>
+						<p className="section-description">{person.about}</p>
+					<p className="section-description">{person.specialities}</p>
+				<a href={person.cv.btnLink} className="button" target="blank">{person.cv.btnTxt}</a>
 					</div>
 				</div>
 			</section>

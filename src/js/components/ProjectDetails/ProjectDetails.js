@@ -41,31 +41,29 @@ class ProjectDetails extends React.Component{
 		return (
 			<div>
 			<ProjectNavigation />
-			<section class="section project">
-				<div class="container">
-					<h1 class="section-heading">{project_data.name}</h1>
-					<p class="section-description">{project_data.desc}</p>
-					<div class="row">
-						<div class="eight columns">
-							<div class="project-release">
-								<span class="project-release-label">Year: </span>
-								<span class="project-release-date">{project_data.year}
+		<section className="section project">
+				<div className="container">
+					<h1 className="section-heading">{project_data.name}</h1>
+				<p className="section-description">{project_data.desc}</p>
+			<div className="row">
+						<div className="eight columns">
+							<div className="project-release">
+								<span className="project-release-label">Year: </span>
+							<span className="project-release-date">{project_data.year}
 								</span>
 							</div>
 							<div>
-								<span class="list-heading">Tech stack: </span>
+								<span className="list-heading">Tech stack: </span>
 								{ProjectTechList}
 							</div>
 						</div>
-						<div class="four columns">
+						<div className="four columns">
 							{ProjectLinksList}
 						</div>
 					</div>
-					<div class="row">
-
-								 <Slideshow config={this.slideshowConfig}/>
-
-			 </div>
+					<div className="row">
+						<Slideshow config={this.slideshowConfig}/>
+			 		</div>
 				</div>
 			</section>
 			</div>

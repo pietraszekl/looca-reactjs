@@ -1,14 +1,14 @@
 import React from "react";
 
-let ProjectDetailsLink = React.createClass({
+class ProjectDetailsLink extends React.Component{
 	render() {
 		const link = this.props.link;
 		return (
-				<a href={link.url} class="button u-pull-right">
+				<a href={link.url} className="button u-pull-right">
 					{link.text}
 				</a>
 		);
 	}
-});
+}
 
-module.exports = ProjectDetailsLink;
+export default ProjectDetailsLink;

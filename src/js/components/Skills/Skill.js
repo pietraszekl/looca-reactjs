@@ -1,16 +1,15 @@
 import React from "react";
 
-
-let Skill = React.createClass({
+class Skill extends React.Component{
 	render() {
 		const skill = this.props.skill;
 
 		return (
-			<li class="skills-list-item">
+			<li className="skills-list-item">
 				{skill}
 			</li>
 		);
 	}
-});
+}
 
-module.exports = Skill;
+export default Skill;

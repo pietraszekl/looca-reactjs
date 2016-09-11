@@ -4,7 +4,7 @@ import Portfolio from "../components/Portfolio/Portfolio";
 import Footer from "../components/Footer";
 
 
-let PortfolioPage = React.createClass({
+class PortfolioPage extends React.Component{
 	render() {
 		return (
 			<div>
@@ -13,6 +13,6 @@ let PortfolioPage = React.createClass({
 			</div>
 		);
 	}
-});
+}
 
-module.exports = PortfolioPage;
+export default PortfolioPage;

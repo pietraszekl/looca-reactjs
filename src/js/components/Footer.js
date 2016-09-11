@@ -15,8 +15,8 @@ class Footer extends React.Component{
 	render() {
 		const footerData = this.state.data.footnote;
 		return (
-			<footer class="footer">
-				<div class="container">
+			<footer className="footer">
+				<div className="container">
 					<small>{footerData}</small>
 				</div>
 			</footer>

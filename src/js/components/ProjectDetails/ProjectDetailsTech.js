@@ -1,12 +1,12 @@
 import React from "react";
 
-let ProjectDetailsTech = React.createClass({
+class ProjectDetailsTech extends React.Component{
 	render() {
 		const tech = this.props.tech;
 		return (
 			<span>{tech} / </span>
 		);
 	}
-});
+}
 
-module.exports = ProjectDetailsTech;
+export default ProjectDetailsTech;

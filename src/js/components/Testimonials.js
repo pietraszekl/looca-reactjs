@@ -21,10 +21,10 @@ class Testimonials extends React.Component{
 	}
 	render() {
 		return (
-			<section class="section testimonials">
-				<div class="container">
-					<h2 class="section-heading">Testimonials</h2>
-					<div class="row testimonials-list">
+			<section className="section testimonials">
+				<div className="container">
+					<h2 className="section-heading">Testimonials</h2>
+				<div className="row testimonials-list">
 						<Slideshow config={this.slideshowConfig}/>
 					</div>
 				</div>

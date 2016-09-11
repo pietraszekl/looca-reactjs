@@ -1,15 +1,15 @@
 import React from "react";
 
-let ProjectDetailsImages = React.createClass({
+class ProjectDetailsImages extends React.Component{
 	render() {
 		const image = this.props.image;
 		return (
 			<div>
-				<img class="u-max-full-width" src={image.src} alt={image.altText}/>
+				<img className="u-max-full-width" src={image.src} alt={image.altText}/>
 				</div>
 
 			);
 		}
-	});
+	}
 
-	module.exports = ProjectDetailsImages;
+export default ProjectDetailsImages;

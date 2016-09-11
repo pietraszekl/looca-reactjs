@@ -3,7 +3,7 @@ import Hero from "../components/Hero";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 
-let ContactPage = React.createClass({
+class ContactPage extends React.Component{
 	render() {
 		return (
 			<div>
@@ -12,6 +12,6 @@ let ContactPage = React.createClass({
 			</div>
 		);
 	}
-});
+}
 
-module.exports = ContactPage;
+export default ContactPage;

@@ -1,12 +1,13 @@
 import React from "react";
 require('../../styles/main.scss');
 
-let LayoutPage = React.createClass({
-	getInitialState(){
-		return {
+class LayoutPage extends React.Component{
+	constructor(){
+		super();
+		this.state = {
 			isLoading: true
 		}
-	},
+	}
 	init(){
 		const days = 7; // Reset when storage is more than 7 days
 		const timeNow = new Date().getTime();
@@ -24,17 +25,17 @@ let LayoutPage = React.createClass({
 				this.setState({isLoading:false});
 			}
 		}
-	},
+	}
 	componentWillMount(){
 		this.init();
-	},
+	}
 	setData(url){
 		let self = this;
 		self.loadJSON(url, function(results) {
 			window.localStorage.setItem("appData", JSON.stringify(results));
 			self.setState({isLoading:false});
 		});
-	},
+	}
 	loadJSON(path, success, error){
 		let xhr = new XMLHttpRequest();
 		xhr.onreadystatechange = function(){
@@ -52,7 +53,7 @@ let LayoutPage = React.createClass({
 		};
 		xhr.open("GET", path, true);
 		xhr.send();
-	},
+	}
 	render() {
 		let PageContent = "Loading...";
 		if(this.state.isLoading === false){
@@ -64,6 +65,6 @@ let LayoutPage = React.createClass({
 			</div>
 		);
 	}
-});
+}
 
-module.exports = LayoutPage;
+export default LayoutPage;

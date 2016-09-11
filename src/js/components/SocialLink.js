@@ -5,10 +5,10 @@ class SocialLink extends React.Component{
 		const connect = this.props.connect;
 
 		return (
-			<li class="contact-icons-item">
+			<li className="contact-icons-item">
 				<a href={connect.link}>
-					<svg class={'icon ' + connect.icon}><use xlinkHref={'#'+connect.icon}></use></svg>
-					<span class="sr-only">{'icon-'+connect.name}</span>
+					<svg className={'icon ' + connect.icon}><use xlinkHref={'#'+connect.icon}></use></svg>
+				<span className="sr-only">{'icon-'+connect.name}</span>
 				</a>
 			</li>
 		);

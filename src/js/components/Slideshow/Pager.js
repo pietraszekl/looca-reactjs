@@ -2,9 +2,6 @@ import React from "react";
 import * as SlideshowActions from "./SlideshowActions";
 
 class Pager extends React.Component{
-  constructor(){
-    super();
-  }
   toggleSlide() {
     SlideshowActions.toggleSlide(this.props.id);
   }
