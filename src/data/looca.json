@@ -63,7 +63,7 @@
         "name": "Gucci",
         "id": "gucci",
         "logo": "gucci-logo.jpg",
-        "desc": "Working at DigitasLbi Commerce (previously known as Sceneric). on integrating front-end prototype with Hybris CMS for Gucci's new ecommerce website.",
+        "desc": "Working at DigitasLbi Commerce (previously known as Sceneric). on integrating front-end prototype with SAP Hybris for Gucci's new ecommerce website.",
         "links": [
           {
             "text": "Visit Gucci website",
@@ -71,7 +71,7 @@
           }
         ],
         "year": "2015/2016",
-        "tech": ["Hybris CMS", "Sass", "Grunt", "jQuery", "RequireJS", "AJAX", "Handlebars", "Git"],
+        "tech": ["SAP Hybris", "Sass", "Grunt", "jQuery", "RequireJS", "AJAX", "Handlebars", "Git"],
         "img": [
           {
             "src": "/images/gucci/gucci-1.jpg",
@@ -103,7 +103,7 @@
         "name": "Jack Wills",
         "id": "jackwills",
         "logo": "jackwills-logo.jpg",
-        "desc": "Maintaining and bug fixing main website. Tech stack: Demandware CMS, RequireJS, HTML, LESS Maintaining and bug fixing main website as well as creating micro pages using AngularJS.",
+        "desc": "Maintaining and bug fixing main website. Tech stack: Demandware, RequireJS, HTML, LESS Maintaining and bug fixing main website as well as creating micro pages using AngularJS.",
         "links": [
           {
             "text": "Visit Jack Wills",
@@ -141,13 +141,19 @@
           }
         ],
         "year": "2013",
-        "tech": ["Hybris CMS", "jQuery", "CSS"],
+        "tech": ["SAP Hybris", "jQuery", "CSS"],
         "img": [
           {
+            "id": "1",
             "src": "/images/monsoon/monsoon-1.jpg",
             "altText": "Monsoon website"
-            }
-          ]
+          },
+          {
+            "id": "2",
+            "src": "/images/monsoon/monsoon-2.jpg",
+            "altText": "Monsoon PDP"
+          }
+        ]
       },
       "delhaize": {
         "name": "Delhaize Group",
@@ -165,10 +171,46 @@
           }
         ],
         "year": "2013/2014",
-        "tech":["Hybris CMS", "Bootstrap 2 & 3", "JavaScript", "Sass&Less"],
+        "tech":["SAP Hybris", "Bootstrap 2 & 3", "JavaScript", "Sass&Less"],
         "img":[
           {
+            "id":"1",
             "src": "/images/delhaize/delhaize-1.jpg",
+            "altText": "Delhaize website"
+          },
+          {
+            "id":"2",
+            "src": "/images/delhaize/delhaize-2.jpg",
+            "altText": "Delhaize website"
+          },
+          {
+            "id":"3",
+            "src": "/images/delhaize/delhaize-3.jpg",
+            "altText": "Delhaize website"
+          },
+          {
+            "id":"4",
+            "src": "/images/delhaize/delhaize-5.jpg",
+            "altText": "Delhaize website"
+          },
+          {
+            "id":"5",
+            "src": "/images/delhaize/delhaize-6.jpg",
+            "altText": "Delhaize website"
+          },
+          {
+            "id":"6",
+            "src": "/images/delhaize/delhaize-7.jpg",
+            "altText": "Delhaize website"
+          },
+          {
+            "id":"7",
+            "src": "/images/delhaize/delhaize-8.jpg",
+            "altText": "Delhaize website"
+          },
+          {
+            "id":"8",
+            "src": "/images/delhaize/delhaize-9.jpg",
             "altText": "Delhaize website"
           }
         ]
@@ -183,6 +225,7 @@
         "tech": ["HTML","Sass","jQuery","Bootstrap 3","Responsive"],
         "img":[
           {
+            "id": "1",
             "src": "/images/bat/bat-veo-1.jpg",
             "altText": "British American Tobacco wesbite"
           }
@@ -192,7 +235,7 @@
         "name": "P&O Ferries",
         "id": "poferries",
         "logo": "poferries-logo.jpg",
-        "desc": "Development of templates for desktop version for the website. The pages were tested and integrated into Hybris CMS e-commerce platform.",
+        "desc": "Development of templates for desktop version for the website. The pages were tested and integrated into SAP Hybris e-commerce platform.",
         "year": "2014",
         "links": [
           {
@@ -200,9 +243,10 @@
             "url": "http://www.poferries.com/"
           }
         ],
-        "tech": ["Hybris CMS","Bootstrap 3","jQuery", "Responsive", "Less"],
+        "tech": ["SAP Hybris","Bootstrap 3","jQuery", "Responsive", "Less"],
         "img": [
           {
+            "id": "1",
             "src": "/images/poferries/poferries-1.jpg",
             "altText": "P&O Ferriers website"
           }
@@ -212,13 +256,19 @@
         "name": "Phones 4u",
         "id": "phones4u",
         "logo": "phones4u-logo.jpg",
-        "desc": "Implementation of Hybris CMS and Responsive Web Design for one of largest mobile phone retailers (at that time) in the United Kingdom.",
+        "desc": "Implementation of SAP Hybris and Responsive Web Design for one of largest mobile phone retailers (at that time) in the United Kingdom.",
         "year": "2013",
         "links":[],
-        "tech": ["Hybris CMS","Bootstrap 3","jQuery","Responsive","Less"],
+        "tech": ["SAP Hybris","Bootstrap 3","jQuery","Responsive","Less"],
         "img": [
           {
+            "id": "1",
             "src": "/images/phones4u/phones4u-1.jpg",
+            "altText": "Phones 4u website"
+          },
+          {
+            "id": "2",
+            "src": "/images/phones4u/phones4u-2.jpg",
             "altText": "Phones 4u website"
           }
         ]
@@ -227,12 +277,18 @@
         "name": "Office Shoes",
         "id": "office",
         "logo": "office-logo.jpg",
-        "desc": "Creating mobile version of the site for Office shoes using jQuery mobile framework and Hyrbis CMS e-commerce platform. Functionality I've been building includes navigation, grid view and checkout process.",
+        "desc": "Creating mobile version of the site for Office shoes using jQuery mobile framework and Hyrbis e-commerce platform. Functionality I've been building includes navigation, grid view and checkout process.",
         "year": "2013/2014",
         "links":[],
-        "tech": ["Hybris CMS","jQuery Mobile", "CSS", "HTML"],
+        "tech": ["SAP Hybris","jQuery Mobile", "CSS", "HTML"],
         "img":[
           {
+            "id": "1",
+            "src": "/images/office/office-1.jpg",
+            "altText": "Office shoes website"
+          },
+          {
+            "id": "2",
             "src": "/images/office/office-1.jpg",
             "altText": "Office shoes website"
           }

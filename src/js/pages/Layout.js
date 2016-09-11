@@ -8,7 +8,7 @@ let LayoutPage = React.createClass({
 		}
 	},
 	init(){
-		const days = 30; // Reset when storage is more than 31 days
+		const days = 7; // Reset when storage is more than 7 days
 		const timeNow = new Date().getTime();
 		const setupTime = localStorage.getItem('loocaSetupTime');
 		const url = './data/looca.json';
