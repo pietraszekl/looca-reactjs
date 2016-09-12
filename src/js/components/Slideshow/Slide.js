@@ -4,8 +4,8 @@ class Slide extends React.Component{
 	render() {
 		return (
 			<div className={this.props.active ? "slide slide--active ": "" + "slide"}>
-				<p>{this.props.text}</p>
-				<p>{this.props.caption}</p>
+			<p className="slide__text">{this.props.text}</p>
+			<p className="slide__caption">{this.props.caption}</p>
 			</div>
 		);
 	}
