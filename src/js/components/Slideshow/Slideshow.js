@@ -13,7 +13,7 @@ class Slideshow extends React.Component{
 		this.getCurrentSlide = this.getCurrentSlide.bind(this);
 		this.state = {
 			data: SlideshowStore.getAll(slides),
-			current: 1
+			current: 0
 		}
 	}
 	componentWillMount(){
