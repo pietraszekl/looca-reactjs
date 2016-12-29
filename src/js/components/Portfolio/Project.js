@@ -8,7 +8,7 @@ class Project extends React.Component{
 		return (
 			<Link to={'/portfolio/' + project.id} className="four columns img-grayscale-color project-thumbnail">
 				<img className="u-max-full-width" src={"/images/logos/"+project.logo} alt={project.name}/>
-				<div className="view-more">View more</div>
+				<div className="view-more">More details</div>
 			</Link>
 		);
 	}
