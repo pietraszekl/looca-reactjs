@@ -9,69 +9,19 @@ class LayoutPage extends React.Component {
       isLoading: true
     };
   }
-  init() {
-    const days = 7; // Reset when storage is more than 7 days
-    const timeNow = new Date().getTime();
-    const setupTime = localStorage.getItem("loocaSetupTime");
-    const url = "./data/looca.json";
-    if (setupTime == null) {
-      localStorage.setItem("loocaSetupTime", timeNow);
-      this.setData(url);
-    } else {
-      if (timeNow - setupTime > days * 24 * 60 * 60 * 1000) {
-        localStorage.removeItem("loocaSetupTime");
-        localStorage.setItem("loocaSetupTime", timeNow);
-        this.setData(url);
-      } else {
-        this.setState({ isLoading: false });
-      }
-    }
-  }
-  componentWillMount() {
-    this.init();
-  }
-  setData(url) {
+  getData() {
+    const itemsRef = firebase.database().ref();
     let self = this;
-    self.loadJSON(url, function(results) {
+    itemsRef.on("value", snapshot => {
+      let results = snapshot.val();
       window.localStorage.setItem("appData", JSON.stringify(results));
       self.setState({ isLoading: false });
     });
   }
-  loadJSON(path, success, error) {
-    let xhr = new XMLHttpRequest();
-    xhr.onreadystatechange = function() {
-      if (xhr.readyState === XMLHttpRequest.DONE) {
-        if (xhr.status === 200) {
-          if (success) {
-            success(JSON.parse(xhr.responseText));
-          }
-        } else {
-          if (error) {
-            error(xhr);
-          }
-        }
-      }
-    };
-    xhr.open("GET", path, true);
-    xhr.send();
+  componentWillMount() {
+    this.getData();
   }
-  componentDidMount() {
-    const itemsRef = firebase.database().ref("items");
-    itemsRef.on("value", snapshot => {
-      let items = snapshot.val();
-      let newState = [];
-      for (let item in items) {
-        newState.push({
-          id: item,
-          title: items[item].title,
-          user: items[item].user
-        });
-      }
-      this.setState({
-        items: newState
-      });
-    });
-  }
+
   render() {
     let PageContent = "Loading...";
     if (this.state.isLoading === false) {
