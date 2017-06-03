@@ -1,8 +1,15 @@
-Converting looca.co.uk to ReactJS app.
+# looca.co.uk as ReactJS app.
 
-Install required modules: `npm install`
+## Install required modules: 
+`npm install`
 
-run dev environment and local host: `npm run dev`
-build for production: `npm run build`
+## Run dev environment and local host: 
+`npm run dev`
 
-server on: `localhost:8080`
+### Server on: 
+`localhost:8080`
+
+## Build for production: 
+`npm run build`
+
+
